@@ -1,7 +1,7 @@
 # Trabajo de Consulta: Integración Numérica con Scala (Método de Simpson 1/3)
 
 **Asignatura:** Programación Funcional y Reactiva  
-**Carrera:** Ingeniería en Computación  
+**Carrera:** Computación  
 **Lenguaje:** Scala  
 **Paradigma:** Programación funcional  
 **Tema:** Funciones de orden superior e integración numérica (método de Simpson 1/3)
@@ -14,11 +14,9 @@ En este trabajo se implementa, en el lenguaje Scala, una solución funcional par
 
 El objetivo principal es poner en práctica la programación funcional en Scala:
 
-- utilizando funciones de orden superior (higher-order functions),
-- evitando bucles imperativos y variables mutables,
-- y trabajando con colecciones inmutables y funciones puras.
-
-Además, se integra el uso de herramientas profesionales como GitHub, donde se versiona el código y se documenta el proyecto a través de este README/Wiki.
+- Utilizando funciones de orden superior (higher-order functions),
+- Evitando bucles imperativos y variables mutables,
+- Trabajando con colecciones inmutables y funciones puras.
 
 ---
 
@@ -34,7 +32,6 @@ Implementar una función genérica de integración numérica en Scala, basada en
 - Implementar una función `errorAprox` que calcule el error absoluto entre el valor esperado y el valor aproximado.
 - Definir en Scala las funciones que representan a las integrandas de las diferentes integrales propuestas en la guía de trabajo.
 - Comparar los resultados numéricos obtenidos con los valores de referencia y analizar el error.
-- Documentar el trabajo en GitHub, siguiendo buenas prácticas de claridad y organización del código.
 
 ---
 
@@ -175,23 +172,15 @@ Los resultados del programa consisten, para cada integral, en:
 - El valor teórico o de referencia proporcionado en la guía.
 - El error absoluto entre ambos valores.
 
-En la ejecución del programa se pueden mostrar en consola con:
-
-    println(s"Integral 1: aprox = $aprox1, esperado = $esperado1, error = $error1")
-    println(s"Integral 2: aprox = $aprox2, esperado = $esperado2, error = $error2")
-    // ...
-
-En la Wiki/README se puede presentar una tabla como la siguiente (completar con los valores que observe al ejecutar el código):
-
-    | Integral | Intervalo | f(x)                          | Aproximación (programa) | Valor esperado (guía) | Error absoluto |
-    |---------|-----------|--------------------------------|-------------------------|------------------------|----------------|
-    | I₁      | [3, 5]    | -x^2 + 8x - 12                | …                       | 7.33                   | …              |
-    | I₂      | [0, 2]    | 3x^2                          | …                       | 8.00                   | …              |
-    | I₃      | [-1, 1]   | x + 2x^2 − x^3 + 5x^4         | …                       | 3.333                  | …              |
-    | I₄      | [1, 2]    | (2x + 1) / (x^2 + x)          | …                       | 1.09861                | …              |
-    | I₅      | [0, 1]    | e^x                           | …                       | 1.71828                | …              |
-    | I₆      | [2, 3]    | 1 / (x − 1)                   | …                       | 0.828427               | …              |
-    | I₇      | [0, 1]    | 1 / (1 + x^2)                 | …                       | 0.785398               | …              |
+| Integral | Intervalo | f(x)                              | Aproximación (programa) | Valor esperado (guía) | Error absoluto |
+|---------|-----------|------------------------------------|-------------------------|------------------------|----------------|
+| I₁      | [3, 5]    | -x² + 8x - 12                     | 7.333333333333333       | 7.33                   | 0.003333333333329662 |
+| I₂      | [0, 2]    | 3x²                               | 8.0                     | 8.0                    | 0.0            |
+| I₃      | [-1, 1]   | x + 2x² − x³ + 5x⁴                | 4.666666666666667       | 3.333                  | 1.3336666666666668 |
+| I₄      | [1, 2]    | (2x + 1) / (x² + x)               | 1.0999999999999999      | 1.09861                | 0.0013899999999997803 |
+| I₅      | [0, 1]    | eˣ                                | 1.7188611518765928      | 1.71828                | 5.811518765928003E-4 |
+| I₆      | [2, 3]    | 1 / (x − 1)                       | 0.6944444444444443      | 0.828427               | 0.13398255555555572 |
+| I₇      | [0, 1]    | 1 / (1 + x²)                      | 0.7833333333333333      | 0.785398               | 0.0020646666666667146 |
 
 ---
 
@@ -200,4 +189,3 @@ En la Wiki/README se puede presentar una tabla como la siguiente (completar con 
 - La función `integracion` implementada en Scala demuestra cómo se puede expresar un método numérico clásico (Simpson 1/3) dentro del paradigma funcional, utilizando una función de orden superior que recibe la integranda como parámetro.
 - La solución aprovecha las capacidades de Scala para trabajar con funciones como valores, permitiendo reutilizar el mismo código para múltiples integrales simplemente cambiando la función `f` y los límites `a` y `b`.
 - El cálculo del error de aproximación permite evaluar la calidad de las soluciones numéricas y verificar que el método de Simpson 1/3 ofrece resultados coherentes con los valores de referencia.
-- El uso de un repositorio en GitHub favorece las buenas prácticas de ingeniería de software: control de versiones, organización del código, y documentación mediante README/Wiki.
