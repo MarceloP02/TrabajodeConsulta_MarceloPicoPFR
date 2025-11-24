@@ -172,7 +172,7 @@ Los resultados del programa consisten, para cada integral, en:
 - El valor teórico o de referencia proporcionado en la guía.
 - El error absoluto entre ambos valores.
 
-| Integral | Intervalo | f(x)                              | Aproximación (programa) | Valor esperado (guía) | Error absoluto |
+| Integral | Intervalo | f(x)                              |      Aproximación       |    Valor esperado     | Error absoluto |
 |---------|-----------|------------------------------------|-------------------------|------------------------|----------------|
 | I₁      | [3, 5]    | -x² + 8x - 12                     | 7.333333333333333       | 7.33                   | 0.003333333333329662 |
 | I₂      | [0, 2]    | 3x²                               | 8.0                     | 8.0                    | 0.0            |
