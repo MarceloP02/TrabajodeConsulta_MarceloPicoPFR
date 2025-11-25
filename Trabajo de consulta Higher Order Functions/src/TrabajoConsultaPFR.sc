@@ -65,7 +65,7 @@ val error5: Double = errorAprox(esperado5, aprox5)
 
 
 def f6(x: Double): Double = {
-  val y: Double = 1.0 / (x - 1.0)
+  val y: Double = 1.0 / math.sqrt(x - 1.0)
   y
 }
 val aprox6: Double = integracion(2.0, 3.0, f6)
